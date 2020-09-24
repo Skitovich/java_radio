@@ -1,0 +1,129 @@
+package ru.netology.domain;
+
+public class Radio {
+    private int currentStation;
+    private  int maxStation;
+    private int minStation;
+    private int currentVolume;
+    private int maxVolume;
+    private  int minVolume;
+
+
+    public int getCurrentStation() {
+        return currentStation;
+    }
+
+    public void setCurrentStation(int currentStation) {
+        if (currentStation > maxStation) {
+           setCurrentStation(getMinStation());
+           return;
+        }
+        if (currentStation < minStation) {
+            setCurrentStation(getMaxStation());
+            return;
+        }
+
+        this.currentStation = currentStation;
+    }
+
+    public int getMaxStation() {
+        maxStation = 9;
+        return maxStation;
+    }
+
+    public void setMaxStation(int maxStation) {
+        this.maxStation = maxStation;
+    }
+
+    public int getMinStation() {
+        return minStation;
+    }
+
+    public void setMinStation(int minStation) {
+        this.minStation = minStation;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume > maxVolume) {
+            return;
+        }
+        if (currentVolume < minVolume) {
+            return;
+        }
+        this.currentVolume = currentVolume;
+    }
+
+    public int getMaxVolume() {
+        maxVolume = 10;
+        return maxVolume;
+    }
+
+    public void setMaxVolume(int maxVolume) {
+        this.maxVolume = maxVolume;
+    }
+
+    public int getMinVolume() {
+        minVolume = 0;
+        return minVolume;
+    }
+
+    public void setMinVolume(int minVolume) {
+        this.minVolume = minVolume;
+    }
+    public void increaseCurrentStation() {
+        int increaseStation = getCurrentStation() + 1;
+        setCurrentStation(increaseStation);
+    }
+    public void decreaseCurrentStation() {
+        int decreaseStation = getCurrentStation() - 1;
+        setCurrentStation(decreaseStation);
+    }
+
+    public void increaseCurrentVolume() {
+        int increaseVolume = getCurrentVolume() + 1;
+        setCurrentVolume(increaseVolume);
+    }
+    public void decreaseCurrentVolume() {
+        int decreaseVolume = getCurrentVolume() - 1;
+        setCurrentVolume(decreaseVolume);
+    }
+
+    public void firstStation () {
+        setCurrentStation(0);
+    }
+    public void secondStation () {
+        setCurrentStation(1);
+    }
+    public void thirdStation () {
+        setCurrentStation(2);
+    }
+    public void forthStation () {
+        setCurrentStation(3);
+    }
+    public void fiveStation () {
+        setCurrentStation(4);
+    }
+    public void sixStation () {
+        setCurrentStation(5);
+    }
+    public void seventStation () {
+        setCurrentStation(6);
+    }
+    public void eightStation () {
+        setCurrentStation(7);
+    }
+    public void nineStation () {
+        setCurrentStation(8);
+    }
+    public void tenStation () {
+        setCurrentStation(9);
+    }
+
+
+
+
+}
