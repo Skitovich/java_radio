@@ -2,11 +2,11 @@ package ru.netology.domain;
 
 public class Radio {
     private int currentStation;
-    private  int maxStation;
+    private int maxStation;
     private int minStation;
     private int currentVolume;
     private int maxVolume;
-    private  int minVolume;
+    private int minVolume;
 
 
     public int getCurrentStation() {
@@ -15,8 +15,8 @@ public class Radio {
 
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {
-           setCurrentStation(getMinStation());
-           return;
+            setCurrentStation(getMinStation());
+            return;
         }
         if (currentStation < minStation) {
             setCurrentStation(getMaxStation());
@@ -27,7 +27,6 @@ public class Radio {
     }
 
     public int getMaxStation() {
-        maxStation = 9;
         return maxStation;
     }
 
@@ -58,7 +57,6 @@ public class Radio {
     }
 
     public int getMaxVolume() {
-        maxVolume = 10;
         return maxVolume;
     }
 
@@ -67,17 +65,18 @@ public class Radio {
     }
 
     public int getMinVolume() {
-        minVolume = 0;
         return minVolume;
     }
 
     public void setMinVolume(int minVolume) {
         this.minVolume = minVolume;
     }
+
     public void increaseCurrentStation() {
         int increaseStation = getCurrentStation() + 1;
         setCurrentStation(increaseStation);
     }
+
     public void decreaseCurrentStation() {
         int decreaseStation = getCurrentStation() - 1;
         setCurrentStation(decreaseStation);
@@ -87,43 +86,11 @@ public class Radio {
         int increaseVolume = getCurrentVolume() + 1;
         setCurrentVolume(increaseVolume);
     }
+
     public void decreaseCurrentVolume() {
         int decreaseVolume = getCurrentVolume() - 1;
         setCurrentVolume(decreaseVolume);
     }
-
-    public void firstStation () {
-        setCurrentStation(0);
-    }
-    public void secondStation () {
-        setCurrentStation(1);
-    }
-    public void thirdStation () {
-        setCurrentStation(2);
-    }
-    public void forthStation () {
-        setCurrentStation(3);
-    }
-    public void fiveStation () {
-        setCurrentStation(4);
-    }
-    public void sixStation () {
-        setCurrentStation(5);
-    }
-    public void seventStation () {
-        setCurrentStation(6);
-    }
-    public void eightStation () {
-        setCurrentStation(7);
-    }
-    public void nineStation () {
-        setCurrentStation(8);
-    }
-    public void tenStation () {
-        setCurrentStation(9);
-    }
-
-
 
 
 }
